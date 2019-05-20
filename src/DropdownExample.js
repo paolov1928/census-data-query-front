@@ -5,6 +5,7 @@ import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
+import Paper from "@material-ui/core/Paper"
 
 const styles = theme => ({
   root: {
@@ -35,8 +36,6 @@ class SimpleSelect extends React.Component {
     age: ""
   }
 
-  componentDidMount() {}
-
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value })
     this.props.handleQueryChange(event.target.value)
@@ -52,7 +51,7 @@ class SimpleSelect extends React.Component {
     const { classes } = this.props
 
     return (
-      <form className={classes.root} autoComplete="off">
+      <Paper className={classes.root}>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="age-simple">Pick a Statistic</InputLabel>
           <Select
@@ -66,7 +65,7 @@ class SimpleSelect extends React.Component {
             {this.renderSelectionOptions()}
           </Select>
         </FormControl>
-      </form>
+      </Paper>
     )
   }
 }
