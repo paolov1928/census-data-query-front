@@ -19,7 +19,7 @@ const styles = theme => ({
   }
 })
 
-function SimpleTable(props) {
+function TableForStats(props) {
   const { classes } = props
 
   return (
@@ -48,8 +48,8 @@ function SimpleTable(props) {
   )
 }
 
-SimpleTable.propTypes = {
+TableForStats.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(SimpleTable)
+export default withStyles(styles)(TableForStats)

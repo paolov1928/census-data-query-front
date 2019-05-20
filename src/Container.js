@@ -1,11 +1,10 @@
 import React, { Component } from "react"
 import Api from "./Api"
-import TableExample from "./TableExample"
-import DropdownExample from "./DropdownExample"
+import Table from "./Table"
+import Dropdown from "./Dropdown"
 
-class StatContainer extends Component {
+class Container extends Component {
   state = {}
-  // why is it pulling multiple times
 
   handleQueryChange = newQuery => {
     Api.queryDB(newQuery).then(d => this.setState({ stats: d }))
@@ -14,15 +13,11 @@ class StatContainer extends Component {
   render() {
     return (
       <React.Fragment>
-        <DropdownExample handleQueryChange={this.handleQueryChange} />
-        {this.state.stats ? (
-          <TableExample stats={this.state.stats} />
-        ) : (
-          " "
-        )}
+        <Dropdown handleQueryChange={this.handleQueryChange} />
+        {this.state.stats ? <Table stats={this.state.stats} /> : " "}
       </React.Fragment>
     )
   }
 }
 
-export default StatContainer
+export default Container

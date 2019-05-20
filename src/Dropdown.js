@@ -14,7 +14,7 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 120
+    minWidth: 300
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2
@@ -31,7 +31,7 @@ const selection = [
   "year"
 ]
 
-class SimpleSelect extends React.Component {
+class SelectForQuery extends React.Component {
   state = {
     age: ""
   }
@@ -70,8 +70,8 @@ class SimpleSelect extends React.Component {
   }
 }
 
-SimpleSelect.propTypes = {
+SelectForQuery.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(SimpleSelect)
+export default withStyles(styles)(SelectForQuery)
