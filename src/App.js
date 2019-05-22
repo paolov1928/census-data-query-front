@@ -2,11 +2,7 @@ import React from "react"
 import Container from "./Container"
 
 function App() {
-  return (
-    <React.Fragment>
-      <Container />
-    </React.Fragment>
-  )
+  return <Container />
 }
 
 export default App

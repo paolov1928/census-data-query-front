@@ -10,7 +10,8 @@ import Paper from "@material-ui/core/Paper"
 const styles = theme => ({
   root: {
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    justifyContent: "center"
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -53,13 +54,13 @@ class SelectForQuery extends React.Component {
     return (
       <Paper className={classes.root}>
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="age-simple">Pick a Statistic</InputLabel>
+          <InputLabel htmlFor="query-simple">Pick a Statistic</InputLabel>
           <Select
-            value={this.state.age}
+            value={this.state.query}
             onChange={this.handleChange}
             inputProps={{
-              name: "age",
-              id: "age-simple"
+              name: "query",
+              id: "query-simple"
             }}
           >
             {this.renderSelectionOptions()}
